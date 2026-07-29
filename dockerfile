@@ -3,6 +3,7 @@ FROM apache/airflow:2.10.5
 RUN pip install --no-cache-dir \
     "apache-airflow==2.10.5" \
     requests \
+    python-dotenv \
     apache-airflow-providers-postgres \
     apache-airflow-providers-mysql \
     apache-airflow-providers-oracle \

@@ -5,3 +5,4 @@
 # --upgrade pip setuptools wheel (atualizar as ferramentas pip para subir o dbt core e o dbt popstgres eles pedem isso para não dar erro de versão)
 
  --- o ajuste que foi feito no dockerfile fez com que eu tivesse que alterar um path dentro do inspec dos arquivos de configuração do airfow init no docker eu localizei ele
+ #docker compose run --rm airflow-webserver airflow users create --username admin --password admin --firstname Air --lastname Flow --role Admin --email admin@example.com (CASO DE ERRO NA CRIAÇÃO DE USUÁRIO)
