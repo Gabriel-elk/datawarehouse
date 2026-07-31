@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_tests_meteo_blue_data
+    description: "A type data convert of meteo_blue_data in raw schema"
+    columns:
+      - name: time
+        description: "the data of meteo request"
+        data_tests:
+          - not_null
+  - name: stg_tests_meteo_blue_campo
+    description: "A type data convert of meteo_blue_data in raw schema"
+    columns:
+      - name: time
+        description: "the data of camp request"
+        data_tests:
+          - not_null
+#declaração do schema de entrada de dados
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: raw_meteo_blue_data
+      - name: raw_meteo_blue_campo

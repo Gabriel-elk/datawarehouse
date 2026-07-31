@@ -6,3 +6,6 @@
 
  --- o ajuste que foi feito no dockerfile fez com que eu tivesse que alterar um path dentro do inspec dos arquivos de configuração do airfow init no docker eu localizei ele
  #docker compose run --rm airflow-webserver airflow users create --username admin --password admin --firstname Air --lastname Flow --role Admin --email admin@example.com (CASO DE ERRO NA CRIAÇÃO DE USUÁRIO)
+
+ --criar o .env dentro do diretório de dags para usar ele somente para os python de dags
+--  o ambiente do DBT está separado para não conflitar com o airflow foi criado ambiente, para acessar:  source /home/airflow/dbt_venv/bin/activate

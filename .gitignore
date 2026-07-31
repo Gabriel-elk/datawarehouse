@@ -6,3 +6,5 @@ __pycache__/
 dbt/target/
 dbt/dbt_packages/
 notebooks/.ipynb_checkpoints/
+target/
+dbt_packages/
