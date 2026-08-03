@@ -41,8 +41,8 @@ select
     felttemperature_min as felt_temperature_min,
     felttemperature_mean as felt_temperature_mean
 from {{ source('raw', 'raw_meteo_blue_campo') }}
-        {% if is_incremental() %}
-where time > (select max(time) from {{ this }})
+         {% if is_incremental() %}
+where cast(time as timestamp) > (select coalesce(max(data_hora), cast('1900-01-01' as timestamp)) from {{ this }})
         {% endif %}
 )
 select *

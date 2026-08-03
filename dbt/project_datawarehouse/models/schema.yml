@@ -4,21 +4,31 @@ models:
   - name: stg_tests_meteo_blue_data
     description: "A type data convert of meteo_blue_data in raw schema"
     columns:
-      - name: time
+      - name: data_hora
         description: "the data of meteo request"
         data_tests:
           - not_null
   - name: stg_tests_meteo_blue_campo
-    description: "A type data convert of meteo_blue_data in raw schema"
+    description: "A type data convert of meteo_blue_soil in raw schema"
     columns:
-      - name: time
+      - name: data_hora
         description: "the data of camp request"
         data_tests:
           - not_null
+  - name: stg_tests_open_meteo_data
+    description: "A type data convert of open meteo data in raw schema"
+    columns:
+      - name: data_hora
+        description: "the data of camp request"
+        data_tests:
+          - not_null
+
 #declaração do schema de entrada de dados
 sources:
   - name: raw
     schema: raw
+    #tabelas que são consultadas (entrada dos dados)
     tables:
       - name: raw_meteo_blue_data
       - name: raw_meteo_blue_campo
+      - name: raw_open_meteo
