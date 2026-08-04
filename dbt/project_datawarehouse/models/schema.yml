@@ -22,13 +22,22 @@ models:
         description: "the data of camp request"
         data_tests:
           - not_null
+  - name: stg_unionall_meteo_data
+    description: "unnion of meteorologic data in staging tables"
+    columns:
+      - name: data_hora
+        description: "the data of camp request"
 
 #declaração do schema de entrada de dados
 sources:
   - name: raw
     schema: raw
+  - name: stg
+    schema: staging
     #tabelas que são consultadas (entrada dos dados)
     tables:
       - name: raw_meteo_blue_data
       - name: raw_meteo_blue_campo
       - name: raw_open_meteo
+      - name: stg_tests_meteo_blue_data
+      - name: stg_unionall_meteo_data
