@@ -1,3 +1,4 @@
+- My Project is starting after finish i will fix this readme (Thank you for your understanding.)
 #docker compose up -d postgres-airflow postgres (bancos primeiro, espera uns 10s)
 #docker compose up airflow-init (sem -d, pra ver ele migrar e criar o user; ele roda e para sozinho, é normal)
 #docker compose up -d (agora sim o resto)
